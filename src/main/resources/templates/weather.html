@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода в {{ city }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .temperature {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .condition {
+            font-size: 1.2em;
+            color: gray;
+        }
+        .windSpeed {
+            font-size: 1.2em;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Погода в городе <span th:text="${city}"></span></h1>
+    <p class="temperature"><span th:text="${temperature}"></span>°C</p>
+    <p class="condition">Состояние: <span th:text="${condition}"></span></p>
+    <p class="windSpeed">Скорость ветра: <span th:text="${windSpeed}"></span></p>
+</div>
+
+</body>
+</html>
